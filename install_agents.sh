@@ -3,6 +3,18 @@
 # Claude Code Agents Installation Script
 # This script installs all agents from wshobson/agents repository to ClaudeCode
 
+# 代理配置（可根据需要修改）
+PROXY_ENABLED=false
+PROXY_IP="10.0.0.1"  # 示例IP，请替换为实际代理IP
+PROXY_PORT="8080"     # 示例端口，请替换为实际代理端口
+
+# 如果启用代理
+if [ "$PROXY_ENABLED" = true ]; then
+    export http_proxy="http://$PROXY_IP:$PROXY_PORT"
+    export https_proxy="http://$PROXY_IP:$PROXY_PORT"
+    echo "使用代理: $PROXY_IP:$PROXY_PORT"
+fi
+
 AGENTS_DIR="$HOME/AppData/Roaming/ClaudeCode/agents"
 SOURCE_DIR="E:/data/claudecode/test4/temp_agents_repo"
 LOG_FILE="E:/data/claudecode/test4/clagen/installation.log"
