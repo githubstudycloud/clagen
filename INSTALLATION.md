@@ -15,8 +15,8 @@
 ### 1. 环境准备
 ```bash
 # 设置代理（如需要）
-export http_proxy=http://192.168.0.98:8800
-export https_proxy=http://192.168.0.98:8800
+export http_proxy=http://192.168.0.254:80
+export https_proxy=http://192.168.0.254:80
 
 # 克隆源仓库
 git clone https://github.com/wshobson/agents.git temp_agents_repo
